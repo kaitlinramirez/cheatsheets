@@ -5,7 +5,7 @@ exports.seed = function(knex, Promise) {
     .then(function () {
       // Inserts seed entries
       return knex('cheatsheets').insert([
-        {id: 1, name: 'Knex', snippet: 'npm install.....', description: 'steps to install Knex'},
+        {id: 1, name: 'Knex', snippet: 'asdfasdfsadf', description: 'steps to install Knex'},
         {id: 2, name: 'Heroku', snippet: 'heroku create', description: 'deploying to heroku'}
       ]);
     })
