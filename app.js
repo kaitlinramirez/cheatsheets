@@ -9,7 +9,7 @@ const cors = require('cors')
 const sheets = require("./routes/sheets");
 
 app.use(function(req, res, next) {
-   res.header("Access-Control-Allow-Origin", "GET, POST, OPTIONS, PUT, DELETE");
+   res.header("Access-Control-Allow-Origin", "DELETE");
    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
    next();
  });
