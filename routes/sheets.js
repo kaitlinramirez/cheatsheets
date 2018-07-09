@@ -1,8 +1,5 @@
 const express = require('express');
 const router = express.Router();
-var cors = require('cors')
-var app = express()
-app.use(cors())
 
 const queries = require('../queries/sheets');
 
