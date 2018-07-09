@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-
 const queries = require('../queries/sheets');
 
 router.get("/", (request, response, next) => {

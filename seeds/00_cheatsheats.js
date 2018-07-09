@@ -5,7 +5,7 @@ exports.seed = function(knex, Promise) {
     .then(function () {
       // Inserts seed entries
       return knex('cheatsheets').insert([
-        {id: 1, name: 'Knex', snippet: 'asdfasdfsadf', description: 'steps to install Knex'},
+        {id: 1, name: 'Knex', snippet: '# hello, markdown!', description: 'steps to install Knex'},
         {id: 2, name: 'Heroku', snippet: 'heroku create', description: 'deploying to heroku'}
       ]);
     })
@@ -13,3 +13,8 @@ exports.seed = function(knex, Promise) {
       return knex.raw("SELECT setval('cheatsheets_id_seq', (SELECT MAX(id) FROM cheatsheets))")
     })
 };
+
+var showdown  = require('showdown'),
+    converter = new showdown.Converter(),
+    snippet      = '# hello, markdown!',
+    html      = converter.makeHtml(snippet);
